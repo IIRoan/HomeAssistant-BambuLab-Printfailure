@@ -1,0 +1,17 @@
+services:
+  print-failure-detector:
+    build: .
+    container_name: print-failure-detector
+    restart: unless-stopped
+    ports:
+      - "9225:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./results:/app/results
+    environment:
+      - TZ=UTC
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/status/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

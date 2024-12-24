@@ -10,3 +10,5 @@ python-multipart
 pydantic
 aiofiles
 python-dotenv
+opencv-python-headless 
+pandas
