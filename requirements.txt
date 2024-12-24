@@ -1,0 +1,12 @@
+fastapi
+python-multipart
+uvicorn
+torch
+torchvision
+huggingface-hub
+Pillow
+python-jose[cryptography]
+python-multipart
+pydantic
+aiofiles
+python-dotenv
